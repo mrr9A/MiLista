@@ -1,1 +1,20 @@
-<p>recetario works!</p>
+<div class="recetas-container">
+  <mat-card *ngFor="let receta of recetas" class="receta-card">
+    <mat-card-header>
+      <mat-card-title style="color: white;">{{receta.titulo}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p style="color: white;">{{receta.descripcion}}</p>
+      <mat-divider></mat-divider>
+      <h3 style="color: white;">Ingredientes:</h3>
+      <ul>
+        <li *ngFor="let ingrediente of receta.ingredientes" style="color: white;">{{ingrediente}}</li>
+      </ul>
+      <mat-divider></mat-divider>
+      <h3 style="color: white;">Pasos:</h3>
+      <ol>
+        <li style="color: white;" *ngFor="let paso of receta.pasos">{{paso}}</li>
+      </ol>
+    </mat-card-content>
+  </mat-card>
+</div>

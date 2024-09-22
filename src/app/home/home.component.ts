@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { ModulesModule } from '../modules/modules.module';
 import { CommonModule } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
     ModulesModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   providers: [],
   templateUrl: './home.component.html',
